@@ -1,0 +1,44 @@
+//This file affects the user-facing side and the editor-style in the admin panel
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Vollkorn:400,600');
+
+/* Font Role Mixins */
+
+@mixin header-font-stack(){
+	font-family: 'Vollkorn', Georgia, Times New Roman, serif;
+	font-weight: 400;
+	font-size: 3em;
+	color: $DarkGrey;
+}
+@mixin subheader-font-stack(){
+	font-family: 'Lato', Tahoma, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1.5em;
+	color: $Oregon;
+}
+@mixin body-font-stack(){
+	font-family: 'Lato', Tahoma, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	color: $DarkGrey;
+}
+@mixin link-font-stack(){
+	font-family: 'Lato', Tahoma, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: $Bark;
+}
+@mixin main_menu-font-stack(){
+	font-family: 'Vollkorn', Georgia, Times New Roman, serif;
+	font-weight: 400;
+	font-size: 1.5em;
+	color: $OffWhite;
+}
+
+
+body {
+	font-family: 'Lato', Tahoma, Arial, sans-serif;
+	line-height: 1.4;
+}

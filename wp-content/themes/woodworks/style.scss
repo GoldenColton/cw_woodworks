@@ -1,0 +1,22 @@
+/*
+Theme Name: Woodworks
+Author: Colton Wood
+Description: A custom wordpress theme designed and built for my portfolio.
+Version: 0.1
+License: GPLv3
+*/
+
+/* Partials */
+@import 'scss/modules/colors';
+@import 'scss/modules/mixins';
+@import 'scss/vendor/flexbox';
+@import 'scss/partials/wordpress-core';
+@import 'scss/partials/reset';
+@import 'scss/partials/s';
+@import 'scss/partials/typography';
+@import 'scss/partials/layout';
+@import 'scss/partials/header-footer';
+@import 'scss/partials/navigation';
+
+/*Main Styles Begin*/
+
