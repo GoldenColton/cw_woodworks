@@ -995,30 +995,34 @@ body {
 body {
   background-color: #FDFAF6; }
 
-.site-header {
-  background-color: #1A3F03;
-  height: 150px; }
-
 .site-branding {
-  background-color: #F70E1A;
   width: 15%;
-  margin: auto;
   text-align: center; }
+  .site-branding .site-title {
+    height: 2.5em; }
+    .site-branding .site-title a {
+      font-family: 'Vollkorn', Georgia, Times New Roman, serif;
+      font-weight: 600;
+      font-size: 3em;
+      color: #121713;
+      font-size: 5em;
+      line-height: 80px;
+      text-decoration: none; }
+
+#site-navigation {
+  position: absolute;
+  top: 70px; }
 
 .main-navigation {
   font-family: 'Vollkorn', Georgia, Times New Roman, serif;
   font-weight: 400;
   font-size: 1.5em;
-  color: #FDFAF6; }
-  .main-navigation a {
-    color: #FDFAF6;
-    width: auto; }
-  .main-navigation a:hover {
-    color: #71BA1E; }
+  color: #121713; }
 
 .menu-main-nav-container {
-  width: 95%;
-  margin: auto; }
+  width: 75%;
+  position: absolute;
+  left: 25%; }
 
 #primary-menu {
   width: 100%;
@@ -1026,15 +1030,19 @@ body {
   margin: auto; }
 
 #primary-menu .menu-item {
-  width: 25%; }
-
-#primary-menu #menu-item-9,
-#primary-menu #menu-item-10 {
-  text-align: left; }
-
-#primary-menu #menu-item-11,
-#primary-menu #menu-item-15 {
-  text-align: right; }
+  width: 25%;
+  text-align: center; }
+  #primary-menu .menu-item a {
+    width: fit-content;
+    margin: auto;
+    color: #121713;
+    padding: 0 12px;
+    border-radius: 3px;
+    -webkit-transition: color .25s, border-bottom .25s;
+    transition: color .25s, border-bottom .25s; }
+    #primary-menu .menu-item a:hover {
+      color: #3E6C04;
+      border-bottom: solid 3px #3E6C04; }
 
 .social-navigation a:before {
   -moz-osx-font-smoothing: grayscale;

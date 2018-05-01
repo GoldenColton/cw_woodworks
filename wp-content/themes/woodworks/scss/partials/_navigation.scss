@@ -1,17 +1,10 @@
 .main-navigation {
-  @include main_menu-font-stack(); 
-
-  a {
-    color: $OffWhite;
-    width: auto;
-  }
-  a:hover {
-      color: $Guacamole;
-  }
+  @include main_menu-font-stack();
 }
 .menu-main-nav-container {
-    width: 95%;
-    margin: auto;
+  width: 75%;
+  position: absolute;
+  left: 25%;
 }
 #primary-menu {
   width: 100%;
@@ -20,15 +13,24 @@
 }
 #primary-menu .menu-item {
   width: 25%;
+  text-align: center;
+
+  a {
+    width: fit-content;
+    margin: auto;
+    color: $DarkGrey;
+    padding: 0 12px;
+    border-radius: 3px;
+    -webkit-transition: color .25s, border-bottom .25s;
+    transition: color .25s, border-bottom .25s;
+
+    &:hover {
+      color: $Moss;
+      border-bottom: solid 3px $Moss;
+    }
+  }
 }
-#primary-menu #menu-item-9,
-#primary-menu #menu-item-10 {
-  text-align: left;
-}
-#primary-menu #menu-item-11,
-#primary-menu #menu-item-15 {
-  text-align: right;
-}
+
 
 
 // == SOCIAL MEDIA ICONS ==

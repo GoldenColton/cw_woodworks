@@ -1,11 +1,25 @@
 .site-header {
-	background-color: $Forest;
-	height: 150px;
+	// background: $Forest;
 }
 
 .site-branding {
-    background-color: $Crimson;
+	// background-color: $Crimson;
     width: 15%;
-    margin: auto;
     text-align: center;
+
+    .site-title {
+    	height: 2.5em;
+
+    	a {
+    		@include header-font-stack();
+    		font-size: 5em;
+    		line-height: 80px;
+    		text-decoration: none;
+    	}
+    }
+}
+
+#site-navigation {
+    position: absolute;
+    top: 70px;
 }
