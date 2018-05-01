@@ -1,5 +1,6 @@
 .site-header {
 	// background: $Forest;
+	height: 100px;
 }
 
 .site-branding {
@@ -22,4 +23,11 @@
 #site-navigation {
     position: absolute;
     top: 70px;
+}
+
+.site-footer {
+    width: 95%;
+    height: 70px;
+    margin: auto;
+    padding-top: 20px;
 }

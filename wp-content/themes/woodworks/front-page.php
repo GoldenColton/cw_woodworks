@@ -1,8 +1,19 @@
 <?php get_header(); //includes header.php ?>
 <div id="primary" class="content-area">
-	<main class="content">
+	<main class="home-content content">
 
 		<?php 
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile;
 		//Show one "featured" piece from the portfolio
 		$featured_work = new WP_Query( array(
 			'post_type' 		=> 'portfolio_piece',
@@ -17,7 +28,7 @@
 			),
 		) );
 		?>
-		<div class="home_section_wrapper">
+		<div class="home_section_wrapper work-wrapper">
 			<section class="featured-work" >
 				<h2>Work</h2>
 		<?php
@@ -35,22 +46,21 @@
 			  		<?php the_excerpt(); ?>
 			  	</div>
 		<?php endwhile; ?>
-
-			</section>
-		</div>
 		<?php else: ?>
-			Currently no pieces are available to show.
+			<p>Currently no pieces are available to show.</p>
 		<?php endif; 
 		//clean up after you're done querying!
 		wp_reset_postdata();
 		?>
-		<div class="home_section_wrapper">
+			</section>
+		</div>
+		<div class="home_section_wrapper about-wrapper">
 			<section>
 				<h2>About</h2>
 				<p>Insert the first paragraph of the about page.</p>
 			</section>
 		</div>
-		<div class="home_section_wrapper">
+		<div class="home_section_wrapper contact-wrapper">
 			<section>
 				<h2>Contact</h2>
 				<p>Insert excerpt from the contact page.</p>
@@ -61,7 +71,5 @@
 	</main>
 </div>
 <!-- end #content -->
-
-<?php get_sidebar( 'home' ); //includes sidebar.php ?>
 
 <?php get_footer(); //includes footer.php ?>

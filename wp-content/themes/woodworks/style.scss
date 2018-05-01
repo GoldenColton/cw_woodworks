@@ -19,3 +19,34 @@ License: GPLv3
 @import 'scss/partials/navigation';
 
 /*Main Styles Begin*/
+
+.home-hero {
+	// background: url("/uploads/2018/05/jacalyn-beales-294158-unsplash-optimized.jpg") cover no-repeat ;
+	// height: 700px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.hero-text {
+	@include header-font-stack();
+	text-align: center;
+	color: $OffWhite;
+}
+
+.home_section_wrapper {
+	background-color: $Forest;
+
+	section {
+		width: 95%;
+		margin: auto;
+
+		h2{
+			@include header-font-stack();
+		}
+		p{
+			@include body-font-stack();
+			color: $OffWhite;
+		}
+	}
+}

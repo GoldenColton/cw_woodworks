@@ -10,26 +10,43 @@
   width: 100%;
   height: 35px;
   margin: auto;
-}
-#primary-menu .menu-item {
-  width: 25%;
-  text-align: center;
 
-  a {
-    width: fit-content;
-    margin: auto;
-    color: $DarkGrey;
-    padding: 0 12px;
-    border-radius: 3px;
-    -webkit-transition: color .25s, border-bottom .25s;
-    transition: color .25s, border-bottom .25s;
+  .menu-item {
+    width: 25%;
+    text-align: center;
 
-    &:hover {
-      color: $Moss;
-      border-bottom: solid 3px $Moss;
+    a {
+      width: fit-content;
+      margin: auto;
+      color: $DarkGrey;
+      padding: 0 12px;
+      border-radius: 3px;
+      -webkit-transition: color .25s, border-bottom .25s;
+      transition: color .25s, border-bottom .25s;
+
+      &:hover {
+        color: $Moss;
+        border-bottom: solid 3px $Moss;
+      }
     }
   }
-}
+  .current-menu-item {
+
+    a {
+      color: $RiverSand;
+      font-weight: 600;
+      border-bottom: solid 3px $RiverSand;
+      -webkit-transition: color .25s;
+      transition: color .25s;
+
+        &:hover {
+          color: $RiverSand;
+          border-bottom: solid 3px $RiverSand;
+          // box-shadow: -3px 3px $RiverSand, -2px 2px $RiverSand, -1px 1px $RiverSand;
+        }
+    }
+  }
+} // Close #primary-menu
 
 
 
